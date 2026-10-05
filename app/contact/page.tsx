@@ -63,7 +63,17 @@ export default function ContactPage() {
   };
 
   const whatsappMsg = encodeURIComponent(
-    `Hi Ishwari Tours & Travels,\nI want to rent a car.\nName: ${name}\nPhone: ${phone}\nCar: ${car}\nTrip: ${tripType}\nPickup: ${pickup}\nDrop: ${drop}\nDate: ${travelDate}.\nPlease confirm rate & availability.`
+    `*Car Rental & Cab Inquiry*\n` +
+    `*Company:* Ishwari Tours & Travels (Ishwari Engineering & Roadlines)\n\n` +
+    `• *Customer Name:* ${name}\n` +
+    `• *Phone:* ${phone}\n` +
+    `• *Vehicle Preference:* ${car}\n` +
+    `• *Service Type:* ${tripType}\n` +
+    `• *Pickup Location:* ${pickup}\n` +
+    `• *Drop Location:* ${drop}\n` +
+    `• *Travel Date:* ${travelDate || 'Flexible / Immediate'}\n` +
+    `${notes ? `• *Special Notes:* ${notes}\n` : ''}\n` +
+    `Please confirm booking confirmation and best quote. Thank you!`
   );
 
   return (
@@ -98,12 +108,12 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <strong className="block text-slate-900 font-semibold">24/7 Cab Booking Helpline</strong>
-                    <a href="tel:+919822054123" className="text-amber-800 hover:underline font-bold block text-sm">
-                      +91 98220 54123
+                    <a href="tel:+918530410233" className="text-amber-800 hover:underline font-bold block text-sm">
+                      +91 85304 10233
                     </a>
-                    <a href="tel:+919175033456" className="text-slate-600 hover:underline block text-xs">
-                      +91 91750 33456
-                    </a>
+                    <span className="text-slate-500 block text-xs">
+                      Direct Desk • PCMC / Pune
+                    </span>
                   </div>
                 </div>
 
@@ -115,12 +125,12 @@ export default function ContactPage() {
                     <strong className="block text-slate-900 font-semibold">WhatsApp Booking</strong>
                     <span className="text-slate-500 text-xs block mb-1">Instant driver confirmation and car photos</span>
                     <a
-                      href="https://wa.me/919822054123?text=Hi%20Ishwari%20Tours%20%26%20Travels,%20I%20need%20a%20car%20on%20rent."
+                      href="https://wa.me/918530410233?text=Hi%20Ishwari%20Tours%20%26%20Travels%20(Ishwari%20Engineering%20%26%20Roadlines),%20I%20would%20like%20to%20inquire%20about%20booking%20a%20car%20on%20rent.%20Please%20share%20availability%20and%20rates."
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-xs font-semibold text-emerald-700 hover:underline"
                     >
-                      Chat on WhatsApp (+91 98220 54123)
+                      Chat on WhatsApp (+91 85304 10233)
                     </a>
                   </div>
                 </div>
@@ -131,8 +141,8 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <strong className="block text-slate-900 font-semibold">Email & Corporate Bookings</strong>
-                    <a href="mailto:cab@ishwaritours.com" className="text-slate-600 hover:text-amber-800 block text-xs">
-                      cab@ishwaritours.com
+                    <a href="mailto:ishwariengineeringsandroadlins@gmail.com" className="text-slate-600 hover:text-amber-800 block text-xs break-all">
+                      ishwariengineeringsandroadlins@gmail.com
                     </a>
                   </div>
                 </div>
@@ -190,7 +200,7 @@ export default function ContactPage() {
                   </p>
                   <div className="pt-2">
                     <a
-                      href={`https://wa.me/919822054123?text=${whatsappMsg}`}
+                      href={`https://wa.me/918530410233?text=${whatsappMsg}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="py-3 px-6 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs sm:text-sm inline-flex items-center gap-2"
@@ -224,7 +234,7 @@ export default function ContactPage() {
                       <input
                         type="tel"
                         required
-                        placeholder="e.g. 98220 54123"
+                        placeholder="e.g. 85304 10233"
                         value={phone}
                         onChange={(e) => setPhone(e.target.value)}
                         className="w-full border border-slate-300 rounded-lg p-2.5 bg-slate-50 focus:bg-white focus:ring-2 focus:ring-amber-500 focus:outline-none"

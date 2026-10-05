@@ -327,15 +327,15 @@ export default function HomePage() {
 
             <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
               <a
-                href="tel:+919822054123"
+                href="tel:+918530410233"
                 className="py-3 px-6 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs sm:text-sm shadow-md transition-colors flex items-center gap-2"
               >
                 <Phone className="w-4 h-4" />
-                <span>Call +91 98220 54123</span>
+                <span>Call +91 85304 10233</span>
               </a>
 
               <a
-                href="https://wa.me/919822054123?text=Hi%20Ishwari%20Tours%20%26%20Travels,%20I%20need%20a%20car%20on%20rent."
+                href="https://wa.me/918530410233?text=Hi%20Ishwari%20Tours%20%26%20Travels%20(Ishwari%20Engineering%20%26%20Roadlines),%20I%20would%20like%20to%20inquire%20about%20booking%20a%20car%20on%20rent.%20Please%20share%20availability%20and%20rates."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="py-3 px-6 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs sm:text-sm shadow-md transition-colors flex items-center gap-2"
@@ -350,7 +350,7 @@ export default function HomePage() {
 
       <Footer />
       <MobileBottomBar />
-      <FloatingWhatsApp customMessage="Hi Ishwari Tours & Travels, I need a car on rent." />
+      <FloatingWhatsApp customMessage="Hi Ishwari Tours & Travels (Ishwari Engineering & Roadlines), I would like to book a car on rent. Please share availability." />
 
       <QuoteModal
         isOpen={quoteModalOpen}

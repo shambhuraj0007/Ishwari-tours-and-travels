@@ -96,7 +96,7 @@ export default function RoutesPage() {
                 </button>
 
                 <a
-                  href={`https://wa.me/919822054123?text=${encodeURIComponent(`Hi Ishwari Tours, I want to book a cab from ${route.source} to ${route.destination}. Please share car availability and confirmation.`)}`}
+                  href={`https://wa.me/918530410233?text=${encodeURIComponent(`*Route Cab Booking Request*\n*Company:* Ishwari Tours & Travels (Ishwari Engineering & Roadlines)\n\nI want to book a cab for the route: *${route.source}* to *${route.destination}*.\n• Distance: ~${route.distanceKm} km\n• Estimated Duration: ~${route.durationApprox}\nPlease confirm available cars (Sedan / SUV / Innova) and final fare.`)}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white transition-colors"
@@ -126,11 +126,11 @@ export default function RoutesPage() {
               Request Custom Route Quote
             </Link>
             <a
-              href="tel:+919822054123"
+              href="tel:+918530410233"
               className="py-3 px-6 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-xs sm:text-sm border border-slate-700 flex items-center gap-1.5 transition-colors"
             >
               <Phone className="w-4 h-4 text-amber-400" />
-              <span>Call +91 98220 54123</span>
+              <span>Call +91 85304 10233</span>
             </a>
           </div>
         </div>

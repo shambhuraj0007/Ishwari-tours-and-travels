@@ -117,7 +117,7 @@ export default function ServicesPage() {
               Book Self-Drive Car
             </Link>
             <a
-              href="https://wa.me/919822054123?text=Hi%20Ishwari%20Tours%20%26%20Travels,%20I%20want%20to%20rent%20a%20car%20without%20driver%20(Self-Drive)."
+              href="https://wa.me/918530410233?text=Hi%20Ishwari%20Tours%20%26%20Travels%20(Ishwari%20Engineering%20%26%20Roadlines),%20I%20want%20to%20rent%20a%20car%20without%20driver%20(Self-Drive).%20Please%20share%20available%20models%20and%20rates."
               target="_blank"
               rel="noopener noreferrer"
               className="py-3 px-6 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs sm:text-sm transition-colors flex items-center gap-1.5"
@@ -131,7 +131,7 @@ export default function ServicesPage() {
 
       <Footer />
       <MobileBottomBar />
-      <FloatingWhatsApp customMessage="Hi Ishwari Tours & Travels, I want to rent a car without driver." />
+      <FloatingWhatsApp customMessage="Hi Ishwari Tours & Travels (Ishwari Engineering & Roadlines), I want to rent a car without driver." />
     </div>
   );
 }

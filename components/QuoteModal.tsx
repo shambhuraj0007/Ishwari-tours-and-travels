@@ -63,7 +63,16 @@ export default function QuoteModal({
   };
 
   const whatsappMessage = encodeURIComponent(
-    `Hi Ishwari Tours & Travels,\nI need a car on rent.\nName: ${name}\nPhone: ${phone}\nCar: ${car}\nTrip: ${tripType}\nPickup: ${pickup || 'Pune/PCMC'}\nDrop: ${drop || 'Outstation'}\nDate: ${travelDate || 'Flexible'}.\nPlease confirm availability & best fare.`
+    `*Cab Booking Request*\n` +
+    `*Company:* Ishwari Tours & Travels (Ishwari Engineering & Roadlines)\n\n` +
+    `• *Customer Name:* ${name}\n` +
+    `• *Phone:* ${phone}\n` +
+    `• *Selected Car:* ${car}\n` +
+    `• *Rental Type:* ${tripType}\n` +
+    `• *Pickup Location:* ${pickup || 'PCMC / Pune'}\n` +
+    `• *Drop Location:* ${drop || 'Outstation / Local'}\n` +
+    `• *Travel Date:* ${travelDate || 'Immediate / Flexible'}\n\n` +
+    `Please confirm vehicle availability, dispatch schedule, and quotation.`
   );
 
   return (
@@ -104,7 +113,7 @@ export default function QuoteModal({
             </p>
             <div className="pt-2 flex flex-col gap-2">
               <a
-                href={`https://wa.me/919822054123?text=${whatsappMessage}`}
+                href={`https://wa.me/918530410233?text=${whatsappMessage}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full py-2.5 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs sm:text-sm flex items-center justify-center gap-2 transition-colors"
@@ -144,7 +153,7 @@ export default function QuoteModal({
                 <input
                   type="tel"
                   required
-                  placeholder="e.g. 98220 54123"
+                  placeholder="e.g. 85304 10233"
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
                   className="w-full border border-slate-300 rounded-lg p-2.5 bg-slate-50 focus:bg-white focus:ring-2 focus:ring-amber-500 focus:outline-none"

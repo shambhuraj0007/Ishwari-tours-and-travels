@@ -31,7 +31,7 @@ export default function MobileBottomBar() {
       </Link>
 
       <a
-        href="https://wa.me/919822054123?text=Hi%20Ishwari%20Tours%20%26%20Travels,%20I%20need%20a%20car%20on%20rent."
+        href="https://wa.me/918530410233?text=Hi%20Ishwari%20Tours%20%26%20Travels%20(Ishwari%20Engineering%20%26%20Roadlines),%20I%20would%20like%20to%20inquire%20about%20booking%20a%20car%20on%20rent.%20Please%20share%20availability%20and%20rates."
         target="_blank"
         rel="noopener noreferrer"
         className="flex flex-col items-center gap-0.5 text-[10px] font-medium text-emerald-700 hover:text-emerald-800"
@@ -43,7 +43,7 @@ export default function MobileBottomBar() {
       </a>
 
       <a
-        href="tel:+919822054123"
+        href="tel:+918530410233"
         className="flex flex-col items-center gap-0.5 text-[10px] font-medium text-slate-700 hover:text-slate-900"
       >
         <Phone className="w-5 h-5 text-amber-700" />

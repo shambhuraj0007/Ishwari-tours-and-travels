@@ -10,7 +10,7 @@ interface FloatingWhatsAppProps {
 export default function FloatingWhatsApp({ customMessage }: FloatingWhatsAppProps) {
   const [showTooltip, setShowTooltip] = useState(false);
 
-  const defaultMsg = customMessage || "Hi Ishwari Tours & Travels, I would like help planning a trip.";
+  const defaultMsg = customMessage || "Hi Ishwari Tours & Travels (Ishwari Engineering & Roadlines), I would like to inquire about booking a car on rent. Please share availability and rates.";
   const encodedMsg = encodeURIComponent(defaultMsg);
 
   return (
@@ -18,7 +18,7 @@ export default function FloatingWhatsApp({ customMessage }: FloatingWhatsAppProp
       {/* Tooltip Popup */}
       {showTooltip && (
         <div className="bg-slate-900 text-white text-xs py-2 px-3 rounded-lg shadow-xl max-w-xs flex items-center justify-between gap-3 animate-fade-in border border-slate-700">
-          <span>Chat with our India-wide travel planners</span>
+          <span>Chat with our 24/7 Car Rental Dispatch Desk</span>
           <button 
             onClick={() => setShowTooltip(false)}
             className="text-slate-400 hover:text-white"
@@ -30,7 +30,7 @@ export default function FloatingWhatsApp({ customMessage }: FloatingWhatsAppProp
 
       {/* Floating Button */}
       <a
-        href={`https://wa.me/919822054123?text=${encodedMsg}`}
+        href={`https://wa.me/918530410233?text=${encodedMsg}`}
         target="_blank"
         rel="noopener noreferrer"
         onMouseEnter={() => setShowTooltip(true)}

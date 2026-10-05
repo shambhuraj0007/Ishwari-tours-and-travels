@@ -274,7 +274,7 @@ export default function AdminPage() {
                     </td>
                     <td className="px-4 py-3 text-right">
                       <a
-                        href={`https://wa.me/${b.phone.replace(/[^0-9]/g, '')}?text=Hi%20${encodeURIComponent(b.customerName)},%20this%20is%20Ishwari%20Tours%20%26%20Travels%20regarding%20your%20cab%20booking%20for%20${encodeURIComponent(b.carPreference)}%20(${encodeURIComponent(b.pickupLocation)}%20to%20${encodeURIComponent(b.dropLocation)}).`}
+                        href={`https://wa.me/${b.phone.replace(/[^0-9]/g, '')}?text=Hi%20${encodeURIComponent(b.customerName)},%20this%20is%20Ishwari%20Tours%20%26%20Travels%20(Ishwari%20Engineering%20%26%20Roadlines)%20regarding%20your%20car%20rental%20for%20${encodeURIComponent(b.carPreference)}%20(${encodeURIComponent(b.pickupLocation)}%20to%20${encodeURIComponent(b.dropLocation)}).%20Please%20let%20us%20know%20if%20you%20have%20any%20questions.`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="p-1.5 rounded-lg bg-emerald-50 text-emerald-700 hover:bg-emerald-100 border border-emerald-200 inline-flex items-center gap-1"

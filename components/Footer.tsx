@@ -91,11 +91,13 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-amber-400 shrink-0" />
-                <a href="tel:+919822054123" className="hover:text-amber-400 font-semibold text-white">+91 98220 54123</a>
+                <a href="tel:+918530410233" className="hover:text-amber-400 font-semibold text-white">+91 85304 10233</a>
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="w-4 h-4 text-amber-400 shrink-0" />
-                <a href="mailto:cab@ishwaritours.com" className="hover:text-amber-400">cab@ishwaritours.com</a>
+                <a href="mailto:ishwariengineeringsandroadlins@gmail.com" className="hover:text-amber-400 break-all">
+                  ishwariengineeringsandroadlins@gmail.com
+                </a>
               </div>
             </div>
           </div>

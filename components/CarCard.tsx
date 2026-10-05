@@ -11,7 +11,13 @@ interface CarCardProps {
 
 export default function CarCard({ car, onBookNow }: CarCardProps) {
   const whatsappMsg = encodeURIComponent(
-    `Hi Ishwari Tours & Travels, I am interested in renting the ${car.name}. Please share availability for Self-Drive (Without Driver) / With Chauffeur.`
+    `*Car Rental Inquiry*\n` +
+    `*Company:* Ishwari Tours & Travels (Ishwari Engineering & Roadlines)\n\n` +
+    `Hello, I would like to check availability for renting the *${car.name}* (${car.category}).\n` +
+    `• Seating: ${car.seats} Seater | Luggage: ${car.luggage} Bags | AC: Yes\n` +
+    `${car.selfDriveAvailable ? `• Self-Drive Package: 8hr (₹${car.selfDrive8hr}), 12hr (₹${car.selfDrive12hr}) or 24hr (₹${car.selfDrive24hr})\n` : ''}` +
+    `• Chauffeur Rate: ₹${car.ratePerKm}/km\n\n` +
+    `Please share vehicle availability, pickup schedule, and booking confirmation.`
   );
 
   return (
@@ -113,7 +119,7 @@ export default function CarCard({ car, onBookNow }: CarCardProps) {
           </button>
 
           <a
-            href={`https://wa.me/919822054123?text=${whatsappMsg}`}
+            href={`https://wa.me/918530410233?text=${whatsappMsg}`}
             target="_blank"
             rel="noopener noreferrer"
             className="py-2.5 px-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-semibold text-center transition-colors flex items-center justify-center gap-1 shadow-xs"

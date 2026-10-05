@@ -40,11 +40,11 @@ export default function Navbar() {
           </div>
           <div className="flex items-center gap-4 text-xs">
             <a 
-              href="tel:+919822054123" 
+              href="tel:+918530410233" 
               className="inline-flex items-center gap-1.5 hover:text-amber-400 transition-colors font-semibold"
             >
               <Phone className="w-3.5 h-3.5 text-amber-400" />
-              <span>+91 98220 54123</span>
+              <span>+91 85304 10233</span>
             </a>
             <span className="text-slate-600">|</span>
             <span className="hidden sm:inline text-slate-400">
@@ -112,7 +112,7 @@ export default function Navbar() {
         {/* CTA Actions */}
         <div className="hidden sm:flex items-center gap-2.5">
           <a
-            href="https://wa.me/919822054123?text=Hi%20Ishwari%20Tours%20%26%20Travels,%20I%20need%20a%20car%20on%20rent."
+            href="https://wa.me/918530410233?text=Hi%20Ishwari%20Tours%20%26%20Travels%20(Ishwari%20Engineering%20%26%20Roadlines),%20I%20would%20like%20to%20inquire%20about%20booking%20a%20car%20on%20rent.%20Please%20share%20availability%20and%20rates."
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-emerald-50 text-emerald-800 hover:bg-emerald-100 font-medium text-xs sm:text-sm border border-emerald-200 transition-colors"
@@ -167,7 +167,7 @@ export default function Navbar() {
             </Link>
 
             <a
-              href="https://wa.me/919822054123?text=Hi%20Ishwari%20Tours%20%26%20Travels,%20I%20need%20a%20car%20on%20rent."
+              href="https://wa.me/918530410233?text=Hi%20Ishwari%20Tours%20%26%20Travels%20(Ishwari%20Engineering%20%26%20Roadlines),%20I%20would%20like%20to%20inquire%20about%20booking%20a%20car%20on%20rent.%20Please%20share%20availability%20and%20rates."
               target="_blank"
               rel="noopener noreferrer"
               className="w-full py-2.5 px-4 rounded-xl bg-emerald-600 text-white text-center font-medium text-sm flex items-center justify-center gap-2"

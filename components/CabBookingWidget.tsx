@@ -92,9 +92,26 @@ export default function CabBookingWidget({ onSuccess }: CabBookingWidgetProps) {
     if (onSuccess) onSuccess();
   };
 
-  const whatsappMsg = encodeURIComponent(
-    `Hi Ishwari Tours & Travels,\nI need a car on rent.\nMode: ${rentalMode === 'Self-Drive' ? `Self-Drive Without Driver (${selfDriveDuration})` : `With Driver (${withDriverType})`}\nCar: ${activeCar.name}\nPickup Location: ${pickup || 'Pune/PCMC'}\n${rentalMode === 'With-Driver' ? `Drop: ${drop || 'Outstation'}\n` : ''}Date: ${date || 'Soon'}\nTime: ${time}\nName: ${name || 'Customer'}\nPlease confirm availability & booking.`
-  );
+  const buildWhatsAppMsg = () => {
+    const durationLabel = selfDriveDuration === '8hr' ? '8 Hours' : selfDriveDuration === '12hr' ? '12 Hours' : selfDriveDuration === '24hr' ? '24 Hours (1 Day)' : 'Multi-Day';
+    const serviceType = rentalMode === 'Self-Drive' ? `Self-Drive Without Driver (${durationLabel})` : `Chauffeur-Driven (${withDriverType})`;
+    
+    return encodeURIComponent(
+      `*Cab & Car Rental Enquiry*\n` +
+      `*Company:* Ishwari Tours & Travels (Ishwari Engineering & Roadlines)\n\n` +
+      `• *Rental Type:* ${serviceType}\n` +
+      `• *Vehicle:* ${activeCar.name}\n` +
+      `• *Pickup Location:* ${pickup || 'PCMC / Pune'}\n` +
+      `${rentalMode === 'With-Driver' ? `• *Drop Location:* ${drop || 'Outstation'}\n` : ''}` +
+      `• *Travel Date:* ${date || 'Soon / Immediate'}\n` +
+      `• *Pickup Time:* ${time}\n` +
+      `• *Passenger Count:* Up to ${activeCar.seats} Seater\n` +
+      `${name ? `• *Customer Name:* ${name}\n• *Phone:* ${phone}\n` : ''}` +
+      `\nPlease confirm vehicle availability and quotation. Thank you!`
+    );
+  };
+
+  const whatsappMsg = buildWhatsAppMsg();
 
   return (
     <div className="bg-white rounded-2xl sm:rounded-3xl border border-slate-200/90 shadow-2xl overflow-hidden transition-all text-slate-900">
@@ -196,7 +213,7 @@ export default function CabBookingWidget({ onSuccess }: CabBookingWidgetProps) {
             </p>
             <div className="pt-2 flex flex-col gap-2">
               <a
-                href={`https://wa.me/919822054123?text=${whatsappMsg}`}
+                href={`https://wa.me/918530410233?text=${whatsappMsg}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full py-3 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-md"
@@ -380,7 +397,7 @@ export default function CabBookingWidget({ onSuccess }: CabBookingWidgetProps) {
                 <input
                   type="tel"
                   required
-                  placeholder="e.g. 98220 54123"
+                  placeholder="e.g. 85304 10233"
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
                   className="w-full text-xs sm:text-sm border border-slate-300 rounded-xl p-2.5 bg-slate-50 focus:bg-white focus:ring-2 focus:ring-amber-500 focus:outline-none"
@@ -407,7 +424,7 @@ export default function CabBookingWidget({ onSuccess }: CabBookingWidgetProps) {
                 </button>
 
                 <a
-                  href={`https://wa.me/919822054123?text=${whatsappMsg}`}
+                  href={`https://wa.me/918530410233?text=${whatsappMsg}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="py-3 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs sm:text-sm flex items-center justify-center gap-1.5 shadow-md shrink-0"
